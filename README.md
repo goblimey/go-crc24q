@@ -21,13 +21,13 @@ and another in [gpsd](https://github.com/ukyg9e5r6k7gubiekd6/gpsd).
 
 ## Download
 
-go get https://github.com/goblimey/go-crc24q
+go get github.com/goblimey/go-crc24q
 
 ## Usage
 
 ```
 include (
-    crc24q "github.com/goblimey/go-crc24q"
+    "github.com/goblimey/go-crc24q/crc24q"
 )
 ```
 

@@ -1,6 +1,6 @@
-# go-crc24q: A Go implementation of the Qualcom 24-bit Cyclic Redundancy Checksum (CRC) Algorithm
+# go-crc24q: A Go implementation of the Qualcomm 24-bit Cyclic Redundancy Checksum (CRC) Algorithm
 
-This is a Go implementation of the Qualcom CRC-24Q cyclic redundancy checksum,
+This is a Go implementation of the Qualcomm CRC-24Q cyclic redundancy checksum,
 written by Mark Rafter.
 
 This algorithm is used for many purposes, including the checksum value of RTCM messages.
@@ -12,6 +12,12 @@ RTCM3 messages are used to provide corrections to satellite navigation systems s
 allowing greater accuracy.
 Each RTCM3 message is a stream of bits ending in a 24-bit checksum,
 created and checked using this algorithm.
+
+The source code contains references to the original paper describing the algorithm.
+
+There are various implementations of the algorithm in C,
+including one in [rtklib](http://www.rtklib.com/)
+and another in [gpsd](https://github.com/ukyg9e5r6k7gubiekd6/gpsd).
 
 ## Download
 

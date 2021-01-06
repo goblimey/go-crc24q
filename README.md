@@ -27,7 +27,7 @@ go get https://github.com/goblimey/go-crc24q
 
 ```
 include (
-    "github.com/goblimey/go-crc24q/crc24q"
+    crc24q "github.com/goblimey/go-crc24q"
 )
 ```
 

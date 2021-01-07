@@ -32,15 +32,49 @@ include (
 )
 ```
 
-Given message, a slice of unsigned 8-bit integers ([]uint8):
+Given message, []byte, produce a 24-bit checksum like so:
 
 ```
-var crc uint32 = crc24q.Hash(message)
+crc := crc24q.Hash(message)
 ```
 
-produces the checksum.
+To check that a message with a checksum at the end is valid,
+take the message up to but not including the checksum,
+hash it and compare the result with the given checksum.
 
-To test that a checksum value in a message is correct,
-take the message up to but excluding the checksum,
-hash it and compare the result with the hash in the message.
+## Package crc24q
+import "github.com/goblimey/go-crc24q/crc24q"
 
+### Index
+```
+func Hash(data []byte) uint32
+func HiByte(x uint32) byte
+func LoByte(x uint32) byte
+func MiByte(x uint32) byte
+```
+### Package files
+crc24q.go poly.go
+
+#### func Hash
+```
+func Hash(data []byte) uint32
+Hash calculates the crc24q checksum of data.
+```
+
+#### func HiByte
+```
+func HiByte(x uint32) byte
+HiByte returns the high byte of a 24-bit CRC value.
+```
+
+#### func LoByte
+```
+func LoByte(x uint32) byte
+LoByte returns the lower byte of a 24-bit CRC value.
+```
+
+#### func MiByte
+```
+func MiByte(x uint32) byte
+MiByte returns the middle byte of a 24-bit CRC value.
+```
